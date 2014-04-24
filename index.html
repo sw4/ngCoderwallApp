@@ -5,10 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <meta charset="utf-8">
         <!-- ngCoderwall CSS -->
-        <link href="https://rawgithub.com/sw4/ngCoderwall/master/css/styles.css" rel="stylesheet">      
+        <link href="https://rawgithub.com/sw4/ngCoderwallApp/master/css/styles.css" rel="stylesheet">      
     </head>
-    <body data-ng-app="ngCoderwall" data-ng-controller="CoderwallListController" ng-init="getBadges('sw4')">         
-        <ul class='ngCoderwall'>
+    <body data-ng-app="ngCoderwallApp" data-ng-controller="CoderwallAppListController" ng-init="getBadges('sw4')">         
+        <ul class='ngCoderwallApp'>
             <li ng-repeat="badge in badges"  style="background-image:url({{badge.badge}});">
                 <div>{{badge.name+': '+badge.description}}</div>
             </li>
@@ -16,6 +16,6 @@
         <!-- Angular.js -->
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
         <!-- ngCoderwall Model/Controllers (Angular) -->
-        <script src="https://rawgithub.com/sw4/ngCoderwall/master/js/script.js"></script>
+        <script src="https://rawgithub.com/sw4/ngCoderwallApp/master/js/script.js"></script>
     </body>
 </html>
