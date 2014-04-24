@@ -1,11 +1,11 @@
-var ngCoderwall = angular.module('ngCoderwall', []);
+var ngCoderwallApp = angular.module('ngCoderwallApp', []);
 
-ngCoderwall.controller("CoderwallListController", ['$scope', 'CoderwallFactory', '$timeout', function ($scope, CoderwallFactory, $timeout) {
+ngCoderwallApp.controller("CoderwallAppListController", ['$scope', 'CoderwallAppFactory', '$timeout', function ($scope, CoderwallAppFactory, $timeout) {
 
     $scope.badges=[];
     $scope.getBadges= function(username){
 
-        CoderwallFactory.fetch(username).then(function (response) {        
+        CoderwallAppFactory.fetch(username).then(function (response) {        
 
 $scope.badges=response.data.data.badges;
 console.log(response.data.data.badges);
@@ -18,7 +18,7 @@ console.log(response.data.data.badges);
     }    
 
 }]);
-ngCoderwall.factory('CoderwallFactory', ['$http', '$timeout', function ($http, $timeout) {
+ngCoderwallApp.factory('CoderwallAppFactory', ['$http', '$timeout', function ($http, $timeout) {
     var factory = {
         fetch : function (username) {
             return $http.jsonp('https://coderwall.com/'+username+'.json?callback=JSON_CALLBACK').success(function (data) {

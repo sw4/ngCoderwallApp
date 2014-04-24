@@ -1,9 +1,9 @@
-.ngCoderwall, .ngCoderwall li{
+.ngCoderwallApp, .ngCoderwallApp li{
     list-style:none;
     margin:0;
     padding:0;
 }
-.ngCoderwall li{
+.ngCoderwallApp li{
     display:inline-block;
     height:50px;
     width:50px;
@@ -11,7 +11,7 @@
     position:relative;
     z-index:0;
 }
-.ngCoderwall li div{
+.ngCoderwallApp li div{
     font-family:arial;
     font-size:9px;
     border-radius:4px;
@@ -25,6 +25,6 @@
     z-index:1;
     width:300px;
 }
-.ngCoderwall li:hover div{
+.ngCoderwallApp li:hover div{
     opacity:1;
 }
